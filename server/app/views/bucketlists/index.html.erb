@@ -1,0 +1,22 @@
+<h1>testing</h1>
+
+<% @bucketlists.each do |bucketlist| %>
+	<%= bucketlist.name %>
+<% end %>
+
+
+
+
+<div id="bucketlist">
+	<form action="#" id="add">
+		<input type="text" id="number" name="number" placeholder="enter bucket list number"/>
+		<input type="text" id="description" name="description" placeholder="what do you want to do?"/>
+		<input type="text" id="location" name="location" placeholder="enter a location?"/>
+		<input type="submit" value="add"/>
+	</form>
+
+	<div id="bucketlistItems" class="personal-bucketlist">  
+	</div>
+</div>
+
+

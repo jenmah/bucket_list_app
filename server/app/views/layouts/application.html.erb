@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BucketListApp</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600italic,600,700,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
+  <script src="javascripts/models/item.js"></script>
+  <script src="javascripts/collections/bucketlist.js"></script>
+  <script src="javascripts/views/item_view.js"></script>
+  <script src="javascripts/views/bucketlist_view.js"></script>
+  <script src="javascripts/routes/router.js"></script>
+  <script src="javascripts/script.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="user_nav">
+   <% if current_user %>
+     Logged in as <%= current_user.email %>.
+     <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+   <% else %>
+     <%= link_to "Sign up", new_user_registration_path %> or
+     <%= link_to "log in", new_user_session_path %>
+   <% end %>
+ </div>
+
+<%= yield %>
+
+
+</body>
+</html>
