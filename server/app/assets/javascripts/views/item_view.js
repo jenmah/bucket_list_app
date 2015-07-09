@@ -1,4 +1,4 @@
-bucketlistApp.ItemView = Backbone.View.extend({
+bucketlistApp.Views.ItemView = Backbone.View.extend({
 	tagName: 'div',
 	events: {
 		'click button.remove': 'removeItem',

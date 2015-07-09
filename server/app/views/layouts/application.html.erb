@@ -46,23 +46,15 @@
       <div class="form-group  well">
         <div class="form-group">
           <label>Email address</label>
-          <input class="form-control" type="text" name="email" placeholder="email"
-/>
-</div>
-        <div class="form-group">
-          <label>Firstname</label>
-          <input class="form-control" type="text" name="firstname" placeholder="fir
- stname" />
-        </div>
+          <input class="form-control" type="text" name="email" placeholder="email"/>
+      </div>
         <div class="form-group">
           <label>Password</label>
-          <input class="form-control" type="password" name="password" placeholder="
- password" />
+          <input class="form-control" type="password" name="password" placeholder="password" />
         </div>
         <div class="form-group">
           <label>Password confirmation</label>
-          <input class="form-control" type="password" name="password_confirmation"
- placeholder="password confirmation" />
+          <input class="form-control" type="password" name="password_confirmation" placeholder="password confirmation" />
         </div>
         <div class="form-group">
           <button class="btn btn-default" id="signup">Sign up</button>
@@ -71,6 +63,44 @@
     </div>
   </div>
 </script>
+
+
+<script type="text/x-underscore-template" id="sign-in-template">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h2>Sign in</h2>
+      <div class="alert hide" role="alert">
+        <ul></ul>
+      </div>
+      <div class="form-group  well">
+        <div class="form-group">
+          <label>Email address</label>
+          <input class="form-control" type="text" name="email" placeholder="email"/>
+  </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input class="form-control" type="password" name="password" placeholder="password"/>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-default" id="login">Sign in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-underscore-template" id="user-menu-template">
+  <ul>
+    <% if(user.isLoggedIn()){ %>
+      <li><a href="/#users/sign_in">My Account(<%= user.get("email") %>)</a></li>
+      <li><a href="#" id="sign-out">Sign out</a></li>
+    <% } else { %>
+      <li><a href="/#users/sign_in">Sign in</a></li>
+      <li><a href="/#users/sign_up">Sign up</a></li>
+    <% } %>
+  </ul>
+</div>
+</script
 
 
 </body>
