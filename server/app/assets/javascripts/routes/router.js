@@ -6,7 +6,7 @@ bucketlistApp.AppRouter = Backbone.Router.extend({
 		"*actions": "defaultAction"
 	},
 	index: function(){
-		var bucketlistView = new bucketlistApp.BucketlistView({collection: bucketlistApp.bucketlist});
+		var bucketlistView = new bucketlistApp.Views.BucketlistView({collection: bucketlistApp.bucketlist});
 	},
 	signIn: function(){
 		console.log("signIn route");
