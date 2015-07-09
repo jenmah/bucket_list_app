@@ -1,4 +1,4 @@
-bucketlistApp.BucketlistView = Backbone.View.extend({
+bucketlistApp.Views.BucketlistView = Backbone.View.extend({
 	el: '#bucketlist',
 	events: {'submit form#add': 'createItem'},
 	initialize: function(){

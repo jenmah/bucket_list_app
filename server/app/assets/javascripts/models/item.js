@@ -1,6 +1,6 @@
 // var bucketlistApp = bucketlistApp || {};
-bucketlistApp.Item = Backbone.Model.extend({
-	urlRoot: 'http://localhost:3000/bucketlists',
+bucketlistApp.Models.Item = Backbone.Model.extend({
+	urlRoot: '/bucketlists',
 	defaults: {
 		number: '',
 		description: '',
