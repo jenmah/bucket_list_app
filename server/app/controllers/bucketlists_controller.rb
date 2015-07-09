@@ -4,7 +4,8 @@ class BucketlistsController < ApplicationController
 
 	def index
 		@bucketlists = Bucketlist.all
-		# render json: bucketlists
+		@items = Item.all
+		# render json: @bucketlists
 	end
 
 	def create

@@ -4,8 +4,12 @@
 	<%= bucketlist.name %>
 <% end %>
 
+<% @items.each do |item| %>
+	<%= item.description %>
+<% end %>
 
 
+<i class="fa fa-plus fa-5x"></i>
 
 <div id="bucketlist">
 	<form action="#" id="add">
@@ -18,5 +22,7 @@
 	<div id="bucketlistItems" class="personal-bucketlist">  
 	</div>
 </div>
+
+
 
 

@@ -6,24 +6,26 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.delete_all
+# User.delete_all
 Bucketlist.delete_all
 Item.delete_all
 
+# Create User objects
+user1 = User.create(email: "me@me.com", password: "password", admin: true)
 
-user1 = User.create(email: 'me@me.com', admin: true)
 
 # Create Bucketlist objects
 bucketlist1 = Bucketlist.create(name: "Jen's Bucket List")
 
 
 # Create Bucketlist Item objects
-item1 = Item.create(number: 7, description: "swim with whale sharks", completed: false)
-item2 = Item.create(number: 5, description: "photograph fireflies", completed: false)
+item2 = Item.create(number: 7, description: "swim with whale sharks", completed: false)
+item3 = Item.create(number: 5, description: "photograph fireflies", completed: false)
 
-# bucketlist1.items.create({number: 7, description: "swim with whale sharks", completed: false})
 
-user1.bucketlists.create({name: "jen's bucket list"})
 
+bucketlist2 = Bucketlist.create({name: "jen's bucket list", user_id: user1.id})
+
+item1 = Item.create({bucketlist_id: bucketlist1.id, number: 7, description: "swim with whale sharks", completed: false})
 
 puts "seeded!"
