@@ -26,18 +26,19 @@ bucketlistApp.Views.loggedOutView = Backbone.View.extend({
     var request = $.ajax({
       type: 'POST',
       dataType: 'json',
-      url: '/login',
+      url: '/users/sign_in',
       data: { 
         email: email,
         password: password
       }
     //what to do on success
     }).done(function (data) {
+      console.log(data)
       if (data.success === true) {
 
         //perform javascript login
         session.login(data.email);
-
+        console.log('success')
         //change view to logged out
         var view = new bucketlistApp.Views.loggedInView();
         view.render();

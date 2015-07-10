@@ -124,7 +124,7 @@
 <script id="loggedOutView" type="text/x-underscore-template">
   <form id="login">
     <label>Login here:</label>
-    <input type="text" id="username" placeholder="username" required>
+    <input type="text" id="email" placeholder="email" required>
     <input type="password" id="password" placeholder="password" required>
     <button>Login</button>
   </form>
@@ -132,10 +132,11 @@
 </script>
 
 <script id="loggedInView" type="text/x-underscore-template">
-  <p>logged in as: {{ ReviewMi.currentUser }} <button id="logout">Logout</button></p>
+  <p>logged in as: {{ bucketlistApp.currentUser }} <button id="logout">Logout</button></p>
 </script>
 
 <!-- HOME VIEW -->
+
 
 <script id="homeView" type="text/x-underscore-template">
   <div class="home-view">
@@ -158,6 +159,14 @@
     <button>Login</button>
   </form>
   <a href="#users/signup" class="register">Register</a>
+</script>
+
+
+
+
+
+<script id="loggedInView" type="text/x-underscore-template">
+  <p>logged in as: {{ bucketlistApp.currentUser }} <button id="logout">Logout</button></p>
 </script>
 
 

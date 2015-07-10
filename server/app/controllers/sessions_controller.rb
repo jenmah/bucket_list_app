@@ -9,6 +9,7 @@ class SessionsController < Devise::SessionsController
      sign_in user
      render json: {
        id: user.id,
+       success: true,
        email: user.email,
        authentication_token: user.authentication_token
        }, status: 201
@@ -24,10 +25,9 @@ class SessionsController < Devise::SessionsController
   end
 
   def destroy
-    current_user.authentication_token = nil
-    current_user.save
-    render json: {}, status: 201
-  end
+      session[:user_id] = nil
+      render :json => {:success => true, :message => 'SUCCESS: logged out'}
+    end
 
   private
     def current_user
