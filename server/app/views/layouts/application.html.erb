@@ -15,6 +15,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="app"></div>
 
 <script type="text/x-underscore-template" id="application-template">
   <ul>
@@ -89,6 +90,79 @@
     </div>
   </div>
 </script>
+
+
+
+
+
+
+<script id="appView" type="text/x-underscore-template">
+  <div id="container">
+    <div id="banner">
+
+      <a href="#" id="heading">ReviewMi</a>
+
+      <!-- to output login form OR user details and logout button -->
+      <div id="user">
+      </div>
+    </div>
+
+    <ul id="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#search/movies" class="logged-in-only">Search Movies</a></li>
+    </ul>
+
+    <div id="main">
+    </div>
+
+    <div id="footer">
+      <p>Site Designed by Simon Taylor - 2014</p>
+    </div>
+  </div><!-- #container -->
+</script>
+
+<script id="loggedOutView" type="text/x-underscore-template">
+  <form id="login">
+    <label>Login here:</label>
+    <input type="text" id="username" placeholder="username" required>
+    <input type="password" id="password" placeholder="password" required>
+    <button>Login</button>
+  </form>
+  <a href="#users/signup" class="register">Register</a>
+</script>
+
+<script id="loggedInView" type="text/x-underscore-template">
+  <p>logged in as: {{ ReviewMi.currentUser }} <button id="logout">Logout</button></p>
+</script>
+
+<!-- HOME VIEW -->
+
+<script id="homeView" type="text/x-underscore-template">
+  <div class="home-view">
+    <h3 id="page-heading">Latest Reviews...</h3>
+
+    <ul id="reviews">
+    </ul>
+  </div>
+</script>
+
+
+
+
+
+<script id="loggedOutView" type="text/x-underscore-template">
+  <form id="login">
+    <label>Login here:</label>
+    <input type="text" id="email" placeholder="email" required>
+    <input type="password" id="password" placeholder="password" required>
+    <button>Login</button>
+  </form>
+  <a href="#users/signup" class="register">Register</a>
+</script>
+
+
+
+
 
 
 
