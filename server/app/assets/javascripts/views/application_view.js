@@ -2,6 +2,7 @@ bucketlistApp.Views.ApplicationTemplateView = Backbone.View.extend({
   el: "header",
   initialize: function(session){
     this.user = session;
+    console.log(this.user.attributes, 'applicationview this.session')
     this.user.on("successfulSignIn", this.render, this);
     this.user.on("successfulSignOut", this.render, this);
   },

@@ -12,9 +12,10 @@ bucketlistApp.Views.SignInView = Backbone.View.extend({
 		"click #login": "signIn"
 	},
 	signIn: function(){
+		console.log("signIn callback");
 		var self = this;
 	  var user = new bucketlistApp.Models.UserSession;
-	  // console.log("UserSession in sign in method", user.cid);
+	  console.log("UserSession in sign in method", user.cid);
    	user.save({
       email: $("input[name='email']").val(),
       password: $("input[name='password']").val(),
@@ -22,9 +23,12 @@ bucketlistApp.Views.SignInView = Backbone.View.extend({
 			success: function(model, response) {
       	var token = response.authentication_token;
       	$.cookie("authentication_token", token);
-
+      	debugger;
+      	this.session = new bucketlistApp.Models.UserSession(response);
+      	var bucketlistView = new bucketlistApp.Views.BucketlistView({session: this.session});
+      	debugger;
       	// Quick Friday Fix, will look again...
-      	// Issue is that session is not passed into the instantiation of the view as only happening on initialize of the router... 
+      	// Issue is that session is not passed into the instantiation of the view as only happening on initialize of the router...
       	var router = new bucketlistApp.AppRouter();
       	router.renderUserMenu()
       	// user.set({authentication_token: token})
