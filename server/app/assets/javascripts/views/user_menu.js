@@ -1,8 +1,10 @@
 bucketlistApp.Views.UserMenuView = Backbone.View.extend({
  render: function(){
- 	var user = new bucketlistApp.Models.UserSession;  
+ 	console.log('user menu render function called');
+ 	var user = new bucketlistApp.Models.UserSession(); 
  	var template = _.template($('#user-menu-template').html());
-  this.$el.html(template());
+ 		debugger 
+  this.$el.html(template({user: user}));
   return this;
 	} 
 })

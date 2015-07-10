@@ -12,6 +12,8 @@ bucketlistApp.AppRouter = Backbone.Router.extend({
 		console.log("signIn route");
 		var signInView = new bucketlistApp.Views.SignInView;
 		signInView.render();
+		var userMenuView = new bucketlistApp.Views.UserMenuView;
+		userMenuView.render();
 	},
 	signUp: function(){
 		console.log("signUp route");

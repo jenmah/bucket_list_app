@@ -10,6 +10,7 @@ bucketlistApp.Views.SignInView = Backbone.View.extend({
 	},
 	signIn: function(){
 		console.log("signIn callback");
+		// console.log("UserSession in sign in method", user.cid);
 		var self = this;
 	  var user = new bucketlistApp.Models.UserSession;
    	user.save({
