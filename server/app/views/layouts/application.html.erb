@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!--   // <script src="javascript/lib/jquery.cookie.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -16,6 +16,16 @@
 </head>
 <body>
 
+<script type="text/x-underscore-template" id="application-template">
+<header>
+   <ul>
+     <li><a href="/">Home</a></li>
+     <li><a href="/#books">Books</a></li>
+     <li><a href="/#books/new">New Book</a></li>
+     <li id="user-menu"></li>
+   </ul>
+ </header>
+</script>
 
 
 <script type="text/x-underscore-template" id="user-menu-template">
@@ -30,7 +40,6 @@
   </ul>
 </div>
 </script>
-
 
 
 <%#= yield %>
