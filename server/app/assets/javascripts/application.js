@@ -15,22 +15,3 @@
 //= require turbolinks
 //= require script
 //= require_tree .
-
-$(document).ready(function(){
-	var test = new bucketlistApp.Views.UserMenuView;
-	var testContent = test.render().el;
-	$('main').append(testContent);
-})
-
-
-bucketlistApp.Views.ApplicationTemplateView = Backbone.View.extend({
-     el: "body",
-     render: function() {
-     	console.log('render function in applicatoin template');
-       var template = _.template($('#application-template').html());
-       this.$el.html(template());
-       var userMenuView = new bucketlistApp.Views.UserMenuView;
-       this.$('#user-menu-template').html(userMenuView.render().el);
-       return this.el;
-     }
-});

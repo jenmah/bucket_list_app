@@ -17,34 +17,25 @@
 <body>
 
 <script type="text/x-underscore-template" id="application-template">
-<header>
-   <ul>
-     <li><a href="/">Home</a></li>
-     <li><a href="/#books">Books</a></li>
-     <li><a href="/#books/new">New Book</a></li>
-     <li id="user-menu"></li>
-   </ul>
- </header>
-</script>
-
-
-<script type="text/x-underscore-template" id="user-menu-template">
   <ul>
-    {{# if(user.isLoggedIn()) { }}
-      <li><a href="/#users/sign_in">My Account({{ user.get("email") }})</a></li>
-      <li><a href="#" id="sign-out">Sign out</a></li>
-    {{# } else { }}
-      <li><a href="/#users/sign_in">Sign in</a></li>
-      <li><a href="/#users/sign_up">Sign up</a></li>
-    {{# } }}
+   <li><a href="#">Home</a></li>
+   <li><a href="#bucketlists">Your Bucketlist</a></li>
+   <li><a href="#books/new">New Book</a></li>
+   <li id="user-menu"></li>
+  {{# if(user.isLoggedIn()) { }}
+    <li><a href="#users/sign_in">My Account({{ user.get("email") }})</a></li>
+    <li><a href="#" id="sign-out">Sign out</a></li>
+  {{# } else { }}
+    <li><a href="#users/sign_in">Sign in</a></li>
+    <li><a href="#users/sign_up">Sign up</a></li>
+  {{# } }}
+  {{ user.cid }}
   </ul>
 </script>
 
-
 <%#= yield %>
+<header></header>
 <main></main>
-
-
 
 <script type="text/x-underscore-template" id="sign-up-template">
 <div> 

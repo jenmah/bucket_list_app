@@ -7,8 +7,10 @@ var bucketlistApp = bucketlistApp || {
 
 $(document).ready(function(){
 	_.templateSettings = {
-    interpolate: /\{\{(.+?)\}\}/g
-  };
+    evaluate:    /\{\{#([\s\S]+?)\}\}/g,
+    interpolate: /\{\{[^#\{]([\s\S]+?)[^\}]\}\}/g,
+    escape:      /\{\{\{([\s\S]+?)\}\}\}/g,
+  }
 	bucketlistApp.bucketlist = new bucketlistApp.Collections.Bucketlist([]);
 
 	// Creating a new router instance
