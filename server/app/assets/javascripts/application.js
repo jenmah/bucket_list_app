@@ -18,7 +18,8 @@
 
 $(document).ready(function(){
 	var test = new bucketlistApp.Views.UserMenuView;
-	test.render();
+	var testContent = test.render().el;
+	$('main').append(testContent);
 })
 
 
