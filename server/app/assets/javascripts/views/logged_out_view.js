@@ -40,8 +40,12 @@ bucketlistApp.Views.loggedOutView = Backbone.View.extend({
         session.login(data.email);
         console.log('success')
         //change view to logged out
-        var view = new bucketlistApp.Views.loggedInView();
-        view.render();
+        // var view = new bucketlistApp.Views.loggedInView();
+        // view.render();
+        bucketlistApp.router.navigate('#bucketlists');
+        bucketlistApp.Views.appView.render();
+        //this is required as if you are already on the home page and you logout, the page does not re-render
+        bucketlistApp.router.bucketlists();
       } else {
 
         //perform javascript logout

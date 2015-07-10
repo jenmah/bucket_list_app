@@ -1,9 +1,15 @@
 bucketlistApp.AppRouter = Backbone.Router.extend({
 	routes: {
 		"": "index",
+		"bucketlists": "bucketlists",
 		"users/sign_in": "signIn",
 		"users/sign_up": "signUp",
 		// "*actions": "defaultAction"
+	},
+	bucketlists: function(){
+		console.log('bucketLists');
+		var bucketlistView = new bucketlistApp.Views.BucketlistView({collection: bucketlistApp.items});
+		bucketlistView.render();
 	},
 	// renderUserMenu: function(){
 	// 	// First, we need to get the current user to return the session
@@ -24,6 +30,7 @@ bucketlistApp.AppRouter = Backbone.Router.extend({
 	// },
 	index: function(){
 		console.log('index');
+		// bucketlistView.render().el.$
 		// var bucketlistView = new bucketlistApp.Views.BucketlistView({collection: bucketlistApp.bucketlist});
 	},
 	// signIn: function(){
