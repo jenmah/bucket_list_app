@@ -22,427 +22,427 @@ p {
 //https://kuler.adobe.com/Green-%26-Dark-Blue-color-theme-3854662/edit/?copy=true&base=2&rule=Custom&selected=0&name=Copy%20of%20Green%20%26%20Dark%20Blue&mode=rgb&rgbvalues=1,1,1,0.6823529411764706,0.6823529411764706,0.6823529411764706,0.9019607843137255,0.2980392156862745,0.4,0.17647058823529413,0.24313725490196078,0.3137254901960784,0.10588235294117647,0.7372549019607844,0.6078431372549019&swatchOrder=0,1,2,3,4
 
 //color palette
-$white: rgb(255,255,255); 
-$gray: rgb(174,174,174);
-$red: rgb(230,76,102);
-$blue: rgb(45,62,80);
-$aqua: rgb(27,188,155);
+// $white: rgb(255,255,255); 
+// $gray: rgb(174,174,174);
+// $red: rgb(230,76,102);
+// $blue: rgb(45,62,80);
+// $aqua: rgb(27,188,155);
 
-//ADD A LIGHT BLUE TO THE PALETTE?!?!
+// //ADD A LIGHT BLUE TO THE PALETTE?!?!
 
-$shadow: 1px 1px 1px #000, 3px 3px 5px $blue;
+// $shadow: 1px 1px 1px #000, 3px 3px 5px $blue;
 
-//--------------------
-// MIXINS
-//--------------------
-@mixin page-heading {
-  margin: 0;
-  padding: 5px 20px;
+// //--------------------
+// // MIXINS
+// //--------------------
+// @mixin page-heading {
+//   margin: 0;
+//   padding: 5px 20px;
 
-  //text
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
-  color: white;
-  text-shadow: $shadow;
+//   //text
+//   font-family: 'Pacifico', cursive;
+//   font-size: 30px;
+//   color: white;
+//   text-shadow: $shadow;
 
-  background-color: $aqua;
-}
+//   background-color: $aqua;
+// }
 
-@mixin content-header {
-  padding: 5px 0;
-  margin: 0;
+// @mixin content-header {
+//   padding: 5px 0;
+//   margin: 0;
 
-  //text
-  font-size: 26px;
-  text-align: center;
-  color: white;
-  text-shadow: $shadow;
+//   //text
+//   font-size: 26px;
+//   text-align: center;
+//   color: white;
+//   text-shadow: $shadow;
 
-  background-color: $gray;
-}
+//   background-color: $gray;
+// }
 
-@mixin aqua-button {
-  display: inline-block;
+// @mixin aqua-button {
+//   display: inline-block;
 
-  padding: 8px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-  border: 1px solid white;
+//   padding: 8px 10px;
+//   border-radius: 4px;
+//   font-size: 14px;
+//   border: 1px solid white;
 
-  background-color: $aqua;
-  text-decoration: none;
-  color: white;
-}
+//   background-color: $aqua;
+//   text-decoration: none;
+//   color: white;
+// }
 
-@mixin small-btn {
-  background-color: $blue;
-  color: $white;
-  border-radius: 8px;
-}
+// @mixin small-btn {
+//   background-color: $blue;
+//   color: $white;
+//   border-radius: 8px;
+// }
 
-@mixin right-panel {
-  display: inline-block;
-  vertical-align: top;
-  //660px wide
-  padding: 10px;
-  width: 640px;
-}
+// @mixin right-panel {
+//   display: inline-block;
+//   vertical-align: top;
+//   //660px wide
+//   padding: 10px;
+//   width: 640px;
+// }
 
-* {
-  font-family: arial;
-}
+// * {
+//   font-family: arial;
+// }
 
-//--------------------
-// LOGIN / LOGGED OUT
-//--------------------
+// //--------------------
+// // LOGIN / LOGGED OUT
+// //--------------------
 
-.logged-in .logged-in-only {
-  visibility: visible;
-}
+// .logged-in .logged-in-only {
+//   visibility: visible;
+// }
 
-.logged-in-only {
-  visibility: hidden;
-}
+// .logged-in-only {
+//   visibility: hidden;
+// }
 
-//-----------
-// UNIVERSAL
-//-----------
+// //-----------
+// // UNIVERSAL
+// //-----------
 
-body {
-  background-color: $blue;
-}
+// body {
+//   background-color: $blue;
+// }
 
-#container {
-  max-width: 960px;
-  margin: 0 auto;
+// #container {
+//   max-width: 960px;
+//   margin: 0 auto;
 
-  background-color: $white;
+//   background-color: $white;
 
-  //shadow effect
-  -moz-box-shadow:    3px 3px 10px #000;
-  -webkit-box-shadow: 3px 3px 10px #000;
-  box-shadow:         3px 3px 10px #000;
-}
+//   //shadow effect
+//   -moz-box-shadow:    3px 3px 10px #000;
+//   -webkit-box-shadow: 3px 3px 10px #000;
+//   box-shadow:         3px 3px 10px #000;
+// }
 
-#banner {
-  background-color: $gray;
-  position: relative;
+// #banner {
+//   background-color: $gray;
+//   position: relative;
 
-  #heading {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 20px;
-    // text-align: center;
-    font-family: 'Pacifico', cursive;
-    text-shadow: $shadow;
-    font-size: 40px;
-    color: $white;
-    text-decoration: none;
+//   #heading {
+//     display: inline-block;
+//     margin: 0;
+//     padding: 10px 20px;
+//     // text-align: center;
+//     font-family: 'Pacifico', cursive;
+//     text-shadow: $shadow;
+//     font-size: 40px;
+//     color: $white;
+//     text-decoration: none;
 
-    // background-color: yellow;
-  }
+//     // background-color: yellow;
+//   }
 
-  #user {
-    position: absolute;
-    top: 35px;
-    right: 10px;
+//   #user {
+//     position: absolute;
+//     top: 35px;
+//     right: 10px;
 
-    width: 460px;
+//     width: 460px;
 
-    text-align: right;
+//     text-align: right;
 
-    p {
-      margin: 0;
-      font-size: 14px;
-    }
+//     p {
+//       margin: 0;
+//       font-size: 14px;
+//     }
 
-    form#login {
-      display: inline-block;
-      font-size: 14px;
+//     form#login {
+//       display: inline-block;
+//       font-size: 14px;
 
-      label {
-        font-size: 12px;
-        color: $blue;
-      }
+//       label {
+//         font-size: 12px;
+//         color: $blue;
+//       }
       
-      button {
-        @include small-btn;
-      }
-    }
+//       button {
+//         @include small-btn;
+//       }
+//     }
 
-    //registration link
-    .register {
-      font-size: 12px; 
-      color: $blue;
-    }
-  }
-}
+//     //registration link
+//     .register {
+//       font-size: 12px; 
+//       color: $blue;
+//     }
+//   }
+// }
 
-#navbar {
-  list-style: none;
-  margin: 0;
-  padding: 0 10px;
-  background-color: $red;
+// #navbar {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0 10px;
+//   background-color: $red;
 
-  li {
-    display: inline-block;
+//   li {
+//     display: inline-block;
 
-    a {
-      display: block;
-      padding: 10px 10px;
-      text-decoration: none;
-      color: white;
+//     a {
+//       display: block;
+//       padding: 10px 10px;
+//       text-decoration: none;
+//       color: white;
 
-      &:hover {
-        background-color: $blue;
-        // color: black;
-      }
-    }    
-  }
-}
+//       &:hover {
+//         background-color: $blue;
+//         // color: black;
+//       }
+//     }    
+//   }
+// }
 
-#footer {
-  p {
-    padding: 5px 0;
-    margin: 0;
+// #footer {
+//   p {
+//     padding: 5px 0;
+//     margin: 0;
 
-    text-align: center;
-    font-size: 12px;
+//     text-align: center;
+//     font-size: 12px;
 
-    background-color: $gray;
-  }
-}
+//     background-color: $gray;
+//   }
+// }
 
-//-------------------
-// IN MULTIPLE VIEWS
-//-------------------
+// //-------------------
+// // IN MULTIPLE VIEWS
+// //-------------------
 
-#page-heading {
-  @include page-heading;
-}
+// #page-heading {
+//   @include page-heading;
+// }
 
-//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//-----------
-// HOME VIEW
-//-----------
+// //-----------
+// // HOME VIEW
+// //-----------
 
-#reviews {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+// #reviews {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
 
-  li {
-    margin: 0;
-    border-bottom: 5px solid $red;
+//   li {
+//     margin: 0;
+//     border-bottom: 5px solid $red;
 
-    &:hover {
-      cursor: pointer;
-    }
-  }//li
-}//#reviews
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }//li
+// }//#reviews
 
-//---------------
-// HOME SUB VIEW 
-//---------------
+// //---------------
+// // HOME SUB VIEW 
+// //---------------
 
-.home-sub-view {
-  h3.title {
-    font-size: 26px;
-    text-align: center;
-    padding: 5px 0;
-    margin: 0;
+// .home-sub-view {
+//   h3.title {
+//     font-size: 26px;
+//     text-align: center;
+//     padding: 5px 0;
+//     margin: 0;
 
-    text-shadow: $shadow;
-    background-color: $gray;
-    color: $white;
-  }
+//     text-shadow: $shadow;
+//     background-color: $gray;
+//     color: $white;
+//   }
 
-  .img-thumb {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 150px;
-    max-height: 222px;
-  }
+//   .img-thumb {
+//     display: inline-block;
+//     vertical-align: top;
+//     max-width: 150px;
+//     max-height: 222px;
+//   }
 
-  .details {
-    display: inline-block;
-    vertical-align: top;
-    width: 790px;
-    padding: 0 10px;
+//   .details {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 790px;
+//     padding: 0 10px;
 
-    p {
-      margin: 10px 0;
-      font-size: 14px;
-    }
+//     p {
+//       margin: 10px 0;
+//       font-size: 14px;
+//     }
 
-    a.review-this {
-      @include aqua-button;
-    }
-  }
-}
+//     a.review-this {
+//       @include aqua-button;
+//     }
+//   }
+// }
 
-//--------------
-// SEARCH MOVIES
-//--------------
+// //--------------
+// // SEARCH MOVIES
+// //--------------
 
-.search-movies {
-  h3 {
-    @include page-heading;
-  }
+// .search-movies {
+//   h3 {
+//     @include page-heading;
+//   }
 
-  //form
-  #search-movies-frm {
-    padding: 5px 10px;
+//   //form
+//   #search-movies-frm {
+//     padding: 5px 10px;
 
-    //input box
-    #search-text {
-      font-size: 14px;
-      width: 300px;
-    }
+//     //input box
+//     #search-text {
+//       font-size: 14px;
+//       width: 300px;
+//     }
 
-    button {
-      font-size: 14px;
-    }
-  }
+//     button {
+//       font-size: 14px;
+//     }
+//   }
 
-  ul.movies-list {
-    list-style: none;
-    padding: 0;
+//   ul.movies-list {
+//     list-style: none;
+//     padding: 0;
 
-    li {
-      display: block;
-      padding: 5px 10px;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      background-color: $gray;
+//     li {
+//       display: block;
+//       padding: 5px 10px;
+//       border-top: 1px solid black;
+//       border-bottom: 1px solid black;
+//       background-color: $gray;
 
-      &:hover {
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        background-color: $red;
-        color: white;
-        cursor: pointer;
-      }
-    }
-  }
-}
+//       &:hover {
+//         border-top: 1px solid white;
+//         border-bottom: 1px solid white;
+//         background-color: $red;
+//         color: white;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// }
 
-//------------------
-// REVIEW VIEW
-//------------------
+// //------------------
+// // REVIEW VIEW
+// //------------------
 
-.review-view {
-  h1 {
-    @include page-heading;
-  }
+// .review-view {
+//   h1 {
+//     @include page-heading;
+//   }
 
-  h2 {
-    @include content-header;
-  }
+//   h2 {
+//     @include content-header;
+//   }
 
-  img {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 300px;
-  }
+//   img {
+//     display: inline-block;
+//     vertical-align: top;
+//     max-width: 300px;
+//   }
 
-  #content {
-    display: inline-block;
-    vertical-align: top;
-    width: 640px;
-    padding: 0 10px;
+//   #content {
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 640px;
+//     padding: 0 10px;
 
-    p {
-      font-size: 14px;
-    }
+//     p {
+//       font-size: 14px;
+//     }
 
-    a.back {
-      @include aqua-button;
-    }
-  }
-}
+//     a.back {
+//       @include aqua-button;
+//     }
+//   }
+// }
 
-//------------------
-// MOVIE TITLE VIEW
-//------------------
-.movies {
-  // background-color: pink;
-  h1 {
-    @include page-heading;
-  }
+// //------------------
+// // MOVIE TITLE VIEW
+// //------------------
+// .movies {
+//   // background-color: pink;
+//   h1 {
+//     @include page-heading;
+//   }
 
-  h2 {
-    @include content-header;
-  }
+//   h2 {
+//     @include content-header;
+//   }
 
-  img {
-    display: inline-block;
-    vertical-align: top;
-  }
+//   img {
+//     display: inline-block;
+//     vertical-align: top;
+//   }
 
-  .details {
-    @include right-panel;
+//   .details {
+//     @include right-panel;
 
-    button {
-      @include aqua-button;
-    }
-  }
-}
+//     button {
+//       @include aqua-button;
+//     }
+//   }
+// }
 
-//-----------------
-// REVIEW NEW VIEW
-//-----------------
+// //-----------------
+// // REVIEW NEW VIEW
+// //-----------------
 
-.review-new {
-  h2 {
-    @include content-header;
-  }
+// .review-new {
+//   h2 {
+//     @include content-header;
+//   }
 
-  img {
-    display: inline-block;
-    vertical-align: top;
-  }
-  .content {
-    @include right-panel;
+//   img {
+//     display: inline-block;
+//     vertical-align: top;
+//   }
+//   .content {
+//     @include right-panel;
 
-    form {
-      textarea {
-        width: 630px;
-        height: 290px;
-        font-size: 14px;
-      }
-      button {
-        @include aqua-button;
-      }
-    }
-  }
-}
+//     form {
+//       textarea {
+//         width: 630px;
+//         height: 290px;
+//         font-size: 14px;
+//       }
+//       button {
+//         @include aqua-button;
+//       }
+//     }
+//   }
+// }
 
-//------------------
-// USERS SIGNUP
-//------------------
-.users-signup {
-  form {
-    margin: 0 auto;
-    // background-color: yellow;
-    width: 506px;
+// //------------------
+// // USERS SIGNUP
+// //------------------
+// .users-signup {
+//   form {
+//     margin: 0 auto;
+//     // background-color: yellow;
+//     width: 506px;
   
-    label {
-      display: block;
-      width: 500px;
-      padding: 5px 0;
-    }
-    input {
-      display: block;
-      width: 500px;
-      height: 30px;
+//     label {
+//       display: block;
+//       width: 500px;
+//       padding: 5px 0;
+//     }
+//     input {
+//       display: block;
+//       width: 500px;
+//       height: 30px;
 
-      font-size: 16px;
-    }
+//       font-size: 16px;
+//     }
 
-    button {
-      @include aqua-button;
-    }
-  }
-}
+//     button {
+//       @include aqua-button;
+//     }
+//   }
+// }

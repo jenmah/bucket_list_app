@@ -19,13 +19,19 @@ bucketlist1 = Bucketlist.create(name: "Jen's Bucket List")
 
 
 # Create Bucketlist Item objects
-item2 = Item.create(number: 7, description: "swim with whale sharks", completed: false)
-item3 = Item.create(number: 5, description: "photograph fireflies", completed: false)
+# item2 = Item.create(number: 7, description: "swim with whale sharks", completed: false)
+# item3 = Item.create(number: 5, description: "photograph fireflies", completed: false)
 
 
 
 bucketlist2 = Bucketlist.create({name: "jen's bucket list", user_id: user1.id})
 
-item1 = Item.create({bucketlist_id: bucketlist1.id, number: 7, description: "swim with whale sharks", completed: false})
+item1 = Item.create({bucketlist_id: bucketlist1.id, number: 1, description: "swim with whale sharks", completed: false})
+item2 = Item.create({bucketlist_id: bucketlist1.id, number: 2, description: "photograph fireflies", completed: false})
+item3 = Item.create({bucketlist_id: bucketlist1.id, number: 3, description: "create my own font", completed: false})
+item4 = Item.create({bucketlist_id: bucketlist1.id, number: 4, description: "make this website work", completed: false})
+item5 = Item.create({bucketlist_id: bucketlist1.id, number: 5, description: "live in london", completed: false})
+
+
 
 puts "seeded!"
