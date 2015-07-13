@@ -15,7 +15,7 @@ bucketlistApp.Views.BucketlistView = Backbone.View.extend({
 			});
 		},
 		addItem: function(number, description, location){
-			var item = new bucketlistApp.Item({number: number, description: description, location: location});
+			var item = new bucketlistApp.Models.Item({number: number, description: description, location: location});
 			this.collection.create(item);
 			console.log(this.collection.length);
 		},

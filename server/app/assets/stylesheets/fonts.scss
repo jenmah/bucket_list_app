@@ -1,17 +1,50 @@
+$header-font: 'Oswald', sans-serif;
+$secondary-font: 'Crimson Text', serif;
+
 @font-face { font-family: Sophia; src: url('Sophia.ttf'); } 
+
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: 700;
+}
 
 h1 {
 	font-family: Sophia, sans-serif;
-	font-size: 500%;
+	font-size: 400%;
+	line-height: 70%;
+}
+
+h2 {
+	font-size: 550%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+}
+
+h3 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 35%;
+	font-weight: 400;
+	margin: 0;
+}
+
+#heading {
+	font-family: 'Crimson Text', serif;
+	font-size: 100%;
+	color: rgba(130, 130, 130, 1);
+	font-weight: 400;
+	text-decoration: none;
 }
 
 p {
 	font-family: 'Crimson Text', serif;
 	font-size: 100%;
+	color: rgba(130, 130, 130, 1);
 	font-weight: 400;
 }
-
-
 
 
 

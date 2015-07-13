@@ -1,0 +1,55 @@
+#bucketlist {
+	width: 100%;
+}
+
+// .item-box {
+// 	border: 2px solid red;
+// 	display: inline-block;
+// }
+
+#bucketlist-box {
+	display: inline-block;
+	text-align: center;
+	padding: 7% 25%;
+	width: 150%;
+	border: 1px solid rgba(200, 200, 200, 1);
+	h2.number {
+		margin: 0;
+	}
+	p {
+		margin: 0;
+	}
+	button {
+		border: none;
+		background-color: transparent;
+		font-family: 'Oswald', sans-serif;
+		font-size: 35%;
+	}
+	.completed {
+		display: inline-block;
+	}
+}
+
+.number {
+	margin: none;
+}
+
+#bucketlistItems {
+	display: inline-block;
+}
+
+#app {
+	display: inline-block;
+}
+
+
+// New bucket list item form
+
+#add {
+	input {
+		border: none;
+		background-color: transparent;
+		font-family: 'Oswald', sans-serif;
+		font-size: 35%;
+	}
+}

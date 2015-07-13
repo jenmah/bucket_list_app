@@ -24,15 +24,15 @@ bucketlistApp.Views.loggedInView = Backbone.View.extend({
       type: 'DELETE',
       dataType: 'json',
       url: '/users/sign_out'
-    //what to do on success
+    // what to do on success
     }).done(function (data) {
       //perform javascript logout
       session.logout();
 
-      //take the user back to the home page and re-render
+      // take the user back to the home page and re-render
       bucketlistApp.router.navigate('/');
       bucketlistApp.Views.appView.render();
-      //this is required as if you are already on the home page and you logout, the page does not re-render
+      // this is required as if you are already on the home page and you logout, the page does not re-render
       bucketlistApp.router.index();
     });
 

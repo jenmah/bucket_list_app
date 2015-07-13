@@ -31,6 +31,8 @@ gem 'ransack'
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 # gem 'xray-rails'
 
 # Use ActiveModel has_secure_password

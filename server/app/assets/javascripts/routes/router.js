@@ -9,6 +9,7 @@ bucketlistApp.AppRouter = Backbone.Router.extend({
 	bucketlists: function(){
 		console.log('bucketLists');
 		var bucketlistView = new bucketlistApp.Views.BucketlistView({collection: bucketlistApp.items});
+		bucketlistView.initialize();
 		bucketlistView.render();
 	},
 	// renderUserMenu: function(){

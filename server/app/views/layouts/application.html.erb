@@ -4,9 +4,9 @@
   <title>BucketListApp</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600italic,600,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<!--   // <script src="javascript/lib/jquery.cookie.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.js"></script>
@@ -15,28 +15,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="app"></div>
 
+
+<div id="app"></div>
 
 <div id="bucketlist">
   <form action="#" id="add">
-    <input type="text" id="number" name="number" placeholder="enter bucket list number"/>
-    <input type="text" id="description" name="description" placeholder="what do you want to do?"/>
-    <input type="text" id="location" name="location" placeholder="enter a location?"/>
-    <input type="submit" value="add"/>
+    <i class="fa fa-plus"></i>
+    <input type="text" class="add-item" id="number" name="number" placeholder="enter bucket list number"/>
+    <input type="text" class="add-item" id="description" name="description" placeholder="what do you want to do?"/>
+    <input type="text" class="add-item" id="location" name="location" placeholder="enter a location?"/>
+    <input type="submit" value="ADD"/>
   </form>
 
-  <div id="bucketlistItems" class="personal-bucketlist">  
-  </div>
+<div id="bucketlistItems" class="personal-bucketlist">  
 </div>
 
+</div>
+
+
 <script type="text/x-underscore-template" id="list-item">
-  <h2 class="number">{{ number }}</h2>
-  <p class="description">{{ description }}</p>
-  <p class="location">{{ location }}</p>
-  <button class="edit">Edit</button>
-  <button class="remove">Remove</button>
-  <input type="checkbox" class="completed">Mark as Completed
+  <div id="bucketlist-box">
+    <h2 class="number">{{ number }}</h2>
+    <p class="description italic bold">{{ description }}</p>
+    <p class="location italic bold">{{ location }}</p>
+    <button class="edit button">EDIT <i class="fa fa-pencil"></i></button>
+    <button class="remove button">REMOVE <i class="fa fa-trash-o"></i></button>
+    <br>
+    <input type="checkbox" class="completed"><h3>MARK AS COMPLETED</h3>
+  </div>
 </script>
 
 
@@ -57,6 +64,8 @@
   {{ user.cid }}
   </ul>
 </script>
+
+
 
 <%#= yield %>
 <header></header>
@@ -121,15 +130,16 @@
 
 
 <script id="appView" type="text/x-underscore-template">
-  <div id="container">
-    <div id="banner">
 
-      <a href="#" id="heading">ReviewMi</a>
-
+    <a href="https://instagram.com/before_ikickit/" id="heading"><i class="fa fa-instagram"></i></a>
+    <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-twitter"></i></a>
+    <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-facebook"></i></a>
+      <a href="#" id="heading">HOME</a>
+      <a href="#prints" id="heading">PRINTS</a>
+      <h1>before i kick it</h1>
       <!-- to output login form OR user details and logout button -->
       <div id="user">
-      </div>
-    </div>
+
 
     <ul id="navbar">
       <li><a href="#">Home</a></li>
@@ -140,23 +150,22 @@
     </div>
 
     <div id="footer">
-      <p>Site Designed by Simon Taylor - 2014</p>
     </div>
-  </div><!-- #container -->
+
 </script>
 
 <script id="loggedOutView" type="text/x-underscore-template">
   <form id="login">
-    <label>Login here:</label>
+    <label id="heading">LOG IN:</label>
     <input type="text" id="email" placeholder="email" required>
     <input type="password" id="password" placeholder="password" required>
-    <button>Login</button>
+    <button>Log In</button>
   </form>
-  <a href="#users/signup" class="register">Register</a>
+  <a href="#users/signup" class="register" id="heading">Register</a>
 </script>
 
 <script id="loggedInView" type="text/x-underscore-template">
-  <p>logged in as: {{ bucketlistApp.currentUser }} <button id="logout">Logout</button></p>
+  <p>logged in as {{ bucketlistApp.currentUser }} <button id="logout">Logout</button></p>
 </script>
 
 <!-- HOME VIEW -->
@@ -194,8 +203,23 @@
 </script>
 
 
+  <div id="homepage-block1">
+<!--     <%= image_tag("card-examples.jpg", :width => "40%", :alt => "photo-card-examples", :align => "center") %> -->
+    <h1>some text can go here</h1>
+    <p>a site for storing, collecting, and cherishing your favourite moments</p>
+  </div>
 
+  <div id="homepage-block2">
+    <h1>save and store</h1>
+    <h3>LOREM IPSUM HERE</h3>
+    <p>log your future bucket list items, and mark them as accomplished once they’re complete. when you’ve crossed an item off your list, upload a photo so you never forget your favourite moments.</p>
+  </div>
 
+  <div id="homepage-block3">
+    <h1>print and share</h1>
+    <h3>LOREM IPSUM HERE</h3>
+    <p>turn your favourite bucket list moments into beautiful prints</p>
+  </div>
 
 
 

@@ -1,0 +1,29 @@
+body {
+	width: 100%;
+}
+
+#container {
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+#banner {
+	display: inline-block;
+	#heading {
+		margin-right: 3%;
+	}
+}
+
+#add {
+	border: 1px solid red;
+	padding: 2% 2%;
+	width: 25%;
+	text-align: center;
+	.fa-plus {
+		display: block;
+	}
+	input {
+		display: block;
+		text-align: center;
+	}
+}
