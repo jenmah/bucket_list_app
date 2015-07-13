@@ -27,7 +27,7 @@ bucketlistApp.Views.loggedInView = Backbone.View.extend({
     // what to do on success
     }).done(function (data) {
       //perform javascript logout
-      session.logout();
+      Cookies.remove('authentication_token')
 
       // take the user back to the home page and re-render
       bucketlistApp.router.navigate('/');

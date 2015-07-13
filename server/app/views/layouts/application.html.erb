@@ -10,12 +10,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.2/js.cookie.js"></script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
 
 <div id="app"></div>
 
@@ -35,7 +36,7 @@
 
 
 <script type="text/x-underscore-template" id="list-item">
-  <div id="bucketlist-box">
+
     <h2 class="number">{{ number }}</h2>
     <p class="description italic bold">{{ description }}</p>
     <p class="location italic bold">{{ location }}</p>
@@ -43,7 +44,7 @@
     <button class="remove button">REMOVE <i class="fa fa-trash-o"></i></button>
     <br>
     <input type="checkbox" class="completed"><h3>MARK AS COMPLETED</h3>
-  </div>
+
 </script>
 
 
@@ -130,13 +131,20 @@
 
 
 <script id="appView" type="text/x-underscore-template">
-
-    <a href="https://instagram.com/before_ikickit/" id="heading"><i class="fa fa-instagram"></i></a>
-    <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-twitter"></i></a>
-    <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-facebook"></i></a>
+  <h1>before i kick it</h1>
+    <div id="nav-header">
       <a href="#" id="heading">HOME</a>
+      <a href="#about" id="heading">ABOUT</a>
+      <a href="#prints" id="heading">BUCKET LIST</a>
       <a href="#prints" id="heading">PRINTS</a>
-      <h1>before i kick it</h1>
+    <div>  
+
+    <div id="social-icon-header">
+      <a href="https://instagram.com/before_ikickit/" id="heading"><i class="fa fa-instagram"></i></a>
+      <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-twitter"></i></a>
+      <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-facebook"></i></a>
+    </div>
+
       <!-- to output login form OR user details and logout button -->
       <div id="user">
 
@@ -204,7 +212,7 @@
 
 
   <div id="homepage-block1">
-<!--     <%= image_tag("card-examples.jpg", :width => "40%", :alt => "photo-card-examples", :align => "center") %> -->
+    <%= image_tag("card-examples.jpg", :width => "85%", :alt => "photo-card-examples", :align => "center") %>
     <h1>some text can go here</h1>
     <p>a site for storing, collecting, and cherishing your favourite moments</p>
   </div>
@@ -220,6 +228,12 @@
     <h3>LOREM IPSUM HERE</h3>
     <p>turn your favourite bucket list moments into beautiful prints</p>
   </div>
+
+<footer>
+  <a href="https://instagram.com/before_ikickit/" id="heading"><i class="fa fa-instagram fa-lg"></i></a>
+  <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-twitter fa-lg"></i></a>
+  <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-facebook fa-lg"></i></a>
+</footer>
 
 
 

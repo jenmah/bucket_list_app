@@ -27,13 +27,15 @@ $(document).ready(function(){
 	// instantiating the new collection
 	bucketlistApp.items = new bucketlistApp.Collections.Bucketlist();
 
-	$.when(
-		bucketlistApp.items.fetch()
-		).then(function(){
+	// if user then render items
+
+// LOOK AT THIS AGAIN... success and error callbacks
+	// $.when(
+	// 	bucketlistApp.items.fetch()
+	// 	).then(function(){
 			bucketlistApp.router = new bucketlistApp.AppRouter();
 			Backbone.history.start();
-			console.log('done');
-	});
+	// });
 
 });
 

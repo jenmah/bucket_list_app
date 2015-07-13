@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# User.delete_all
+User.delete_all
 Bucketlist.delete_all
 Item.delete_all
 
@@ -38,9 +38,15 @@ item3 = Item.create({bucketlist_id: bucketlist1.id, number: 3, description: "cre
 item4 = Item.create({bucketlist_id: bucketlist1.id, number: 4, description: "make this website work", completed: false})
 item5 = Item.create({bucketlist_id: bucketlist1.id, number: 5, description: "live in london", completed: false})
 
-item6 = Item.create({bucketlist_id: bucketlist2.id, number: 1, description: "swim with whale sharks", completed: false})
-item7 = Item.create({bucketlist_id: bucketlist2.id, number: 2, description: "photograph fireflies", completed: false})
-item8 = Item.create({bucketlist_id: bucketlist2.id, number: 3, description: "create my own font", completed: false})
+item6 = Item.create({bucketlist_id: bucketlist1.id, number: 6, description: "swim with whale sharks", completed: false})
+item7 = Item.create({bucketlist_id: bucketlist1.id, number: 7, description: "photograph fireflies", completed: false})
+item8 = Item.create({bucketlist_id: bucketlist1.id, number: 8, description: "create my own font", completed: false})
+item9 = Item.create({bucketlist_id: bucketlist1.id, number: 9, description: "photograph fireflies", completed: false})
+item10 = Item.create({bucketlist_id: bucketlist1.id, number: 10, description: "create my own font", completed: false})
+
+item11 = Item.create({bucketlist_id: bucketlist2.id, number: 1, description: "swim with whale sharks", completed: false})
+item12 = Item.create({bucketlist_id: bucketlist2.id, number: 2, description: "photograph fireflies", completed: false})
+item13 = Item.create({bucketlist_id: bucketlist2.id, number: 3, description: "create my own font", completed: false})
 
 
 

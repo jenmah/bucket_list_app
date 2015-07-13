@@ -3,9 +3,20 @@ bucketlistApp.Views.BucketlistView = Backbone.View.extend({
 	events: {'submit form#add': 'createItem'},
 	initialize: function(){
 		this.collection.bind('add remove change', this.render, this);
+		var self = this;
+		this.collection.fetch({
+			success: function(collection, response, options) {
+				// self.render();
+				console.log(collection)
+				console.log('success')
+			},
+			error: function(collection, response, options) {
+				console.log('error')
+			}
+		});
 	},
 	render: function(){
-		console.log('render function called')
+		console.log('BucketlistView render function called')
 		var itemList = $('#bucketlistItems');
 		itemList.empty();
 		this.collection.each(function(item){

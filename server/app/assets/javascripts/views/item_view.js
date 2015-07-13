@@ -1,6 +1,6 @@
 bucketlistApp.Views.ItemView = Backbone.View.extend({
 	tagName: 'div',
-	// className : 'item-box',
+	className : 'bucketlist-box',
 	events: {
 		'click button.remove': 'removeItem',
 		'click button.edit': 'editItem',
@@ -15,6 +15,7 @@ bucketlistApp.Views.ItemView = Backbone.View.extend({
 		return this;
 	},
 	removeItem: function(){
+		console.log(this.model.attributes)
 		this.model.destroy();
 	},
 	editItem: function(){

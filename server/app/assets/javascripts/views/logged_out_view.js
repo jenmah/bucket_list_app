@@ -1,6 +1,7 @@
 bucketlistApp.Views.loggedOutView = Backbone.View.extend({
   el: '#user',
   initialize: function () {
+    console.log('init loggedOutView')
     //unbind any existing event handlers
     $(this.el).undelegate('#login', 'submit');
     
@@ -35,13 +36,16 @@ bucketlistApp.Views.loggedOutView = Backbone.View.extend({
     }).done(function (data) {
       console.log(data)
       if (data.success === true) {
+        // debugger;
 
         //perform javascript login
-        session.login(data.email);
+        // session.login(data.email);
+
         console.log('success')
         //change view to logged out
         // var view = new bucketlistApp.Views.loggedInView();
         // view.render();
+        Cookies.set("authentication_token", data.authentication_token);
         bucketlistApp.router.navigate('#bucketlists');
         bucketlistApp.Views.appView.render();
         //this is required as if you are already on the home page and you logout, the page does not re-render

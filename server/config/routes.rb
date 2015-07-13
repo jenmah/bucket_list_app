@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations', sessions: "sessions" }
   root 'home#index'
   
-  resources :bucketlists	
+  resources :bucketlists do
+  	resources :items
+  end
   resources :charges
   
   devise_scope :user do 

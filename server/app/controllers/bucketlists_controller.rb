@@ -9,6 +9,7 @@ class BucketlistsController < ApplicationController
 		# @bucketlists = Item.all
 		# @items = Item.all
 		# render :json =>  @bucketlists
+
 		render json: current_user.bucketlist.items
 	end
 

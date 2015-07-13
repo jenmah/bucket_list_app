@@ -25,13 +25,14 @@ class SessionsController < Devise::SessionsController
   end
 
   def destroy
-      session[:user_id] = nil
+      # session[:user_id] = nil
+      sign_out current_user
       render :json => {:success => true, :message => 'SUCCESS: logged out'}
     end
 
   private
     def current_user
-      User.find_by  authentication_token: params[:authentication_token]
+      User.find_by authentication_token: params[:authentication_token]
     end
 
 end

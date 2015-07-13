@@ -2,6 +2,7 @@ class RegistrationsController < Devise::RegistrationsController
 
 def create
   build_resource(sign_up_params)
+  resource.bucketlist = Bucketlist.new(name: "#{resource.email.split('@').first}")
   resource.save
     if resource.persisted?
       render json: ["your account has been successfully created"]
