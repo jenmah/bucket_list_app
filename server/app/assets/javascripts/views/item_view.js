@@ -15,7 +15,6 @@ bucketlistApp.Views.ItemView = Backbone.View.extend({
 		return this;
 	},
 	removeItem: function(){
-		console.log(this.model.attributes)
 		this.model.destroy();
 	},
 	editItem: function(){

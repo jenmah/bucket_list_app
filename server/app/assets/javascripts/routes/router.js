@@ -8,24 +8,23 @@ bucketlistApp.AppRouter = Backbone.Router.extend({
 	},
 	initialize: function() {
 		console.log('router init')
+		this.getCurrentUser();
 	},
 	bucketlists: function(){
 		console.log('bucketLists');
 		var bucketlistView = new bucketlistApp.Views.BucketlistView({collection: bucketlistApp.items});
 		// bucketlistView.render();
 	},
-	renderUserMenu: function(){
-		// First, we need to get the current user to return the session
-		// var token = $.cookie("authentication_token");
-		// // debugger
-		// if(token === undefined) {
-		// 	console.log('not logged in')
-		// } else {
-		// 	console.log('logged in')
-		// }
-		// Check if we have a logged in user and if we do, pass the token from the db to the session model.
-		// if (token != null) {
-		// 	$.getJSON("/users/"+token, function(data){
+	getCurrentUser: function() {
+		console.log('getCurrentUser');
+		var token = Cookies.get('authentication_token');
+
+		if (token) {
+			$.getJSON("/users/" + token, function(response) {
+				console.log(response)
+				bucketlistApp.CurrentUser = response;
+			})
+		}
 		// 		this.session = new bucketlistApp.Models.UserSession(data);
 		// 		applicationView = new bucketlistApp.Views.ApplicationTemplateView(this.session);
 		// 		applicationView.render();
@@ -38,18 +37,5 @@ bucketlistApp.AppRouter = Backbone.Router.extend({
 	},
 	index: function(){
 		console.log('index');
-		// bucketlistView.render().el.$
-		// var bucketlistView = new bucketlistApp.Views.BucketlistView({collection: bucketlistApp.bucketlist});
-	},
-	// signIn: function(){
-	// 	var signInView = new bucketlistApp.Views.SignInView(this.session);
-	// 	signInView.render();
-	// },
-	// signUp: function(){
-	// 	var signUpView = new bucketlistApp.Views.SignUpView;
-	// 	signUpView.render();
-	// },
-	// initialize: function(){
-	// 	this.renderUserMenu();
-	// }
+	}
 })

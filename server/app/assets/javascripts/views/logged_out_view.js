@@ -38,6 +38,7 @@ bucketlistApp.Views.loggedOutView = Backbone.View.extend({
       if (data.success === true) {
         // debugger;
 
+        bucketlistApp.CurrentUser = data;
         //perform javascript login
         // session.login(data.email);
 

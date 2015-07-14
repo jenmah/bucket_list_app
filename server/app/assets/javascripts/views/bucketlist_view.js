@@ -5,6 +5,7 @@ bucketlistApp.Views.BucketlistView = Backbone.View.extend({
 		this.collection.bind('add remove change', this.render, this);
 		var self = this;
 		this.collection.fetch({
+			bucketlist: 1, 
 			success: function(collection, response, options) {
 				// self.render();
 				console.log(collection)
@@ -19,6 +20,7 @@ bucketlistApp.Views.BucketlistView = Backbone.View.extend({
 		console.log('BucketlistView render function called')
 		var itemList = $('#bucketlistItems');
 		itemList.empty();
+		new bucketlistApp.Views.AddItemView;
 		this.collection.each(function(item){
 			var itemView = new bucketlistApp.Views.ItemView({
 				model: item})
@@ -27,8 +29,9 @@ bucketlistApp.Views.BucketlistView = Backbone.View.extend({
 		},
 		addItem: function(number, description, location){
 			var item = new bucketlistApp.Models.Item({number: number, description: description, location: location});
+			// item.save();
 			this.collection.create(item);
-			console.log(this.collection.length);
+			// console.log(this.collection.length);
 		},
 		createItem: function(event){
 			event.preventDefault();

@@ -1,4 +1,7 @@
 bucketlistApp.Collections.Bucketlist = Backbone.Collection.extend({
-	url: '/bucketlists',
+	url: function() {
+		debugger;
+		return '/bucketlists'
+	},
 	model: bucketlistApp.Models.Item
 })
