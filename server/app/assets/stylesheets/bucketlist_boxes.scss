@@ -13,9 +13,13 @@
 	padding: 0% 0%;
 	width: 25%;
 	background-color: rgba(250, 250, 250, 1);
-	border: 1px solid rgba(200, 200, 200, 1);
+	// border-bottom: 50px solid rgba(225, 225, 225, 1);
+	border: 0px solid rgba(200, 200, 200, 1);
 	h2.number {
 		margin: 0;
+	}
+	h3 {
+		display: inline-block;
 	}
 	p {
 		margin: 0;
@@ -44,15 +48,32 @@
 	width: 100%;
 }
 
-#app {
-	display: inline-block;
-}
 
 
 // New bucket list item form
 
+// #add {
+// 	width: 25%;
+// 	input {
+// 		border: none;
+// 		background-color: transparent;
+// 		font-family: 'Oswald', sans-serif;
+// 		font-size: 35%;
+// 	}
+// }
+
+
 #add {
+	border: 1px solid red;
+	// padding: 2% 2%;
+	width: 25%;
+	text-align: center;
+	.fa-plus {
+		display: block;
+	}
 	input {
+		display: block;
+		text-align: center;
 		border: none;
 		background-color: transparent;
 		font-family: 'Oswald', sans-serif;

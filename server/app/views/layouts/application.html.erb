@@ -49,23 +49,6 @@
 
 
 
-<script type="text/x-underscore-template" id="application-template">
-  <ul>
-   <li><a href="#">Home</a></li>
-   <li><a href="#bucketlists">Your Bucketlist</a></li>
-   <li><a href="#books/new">New Book</a></li>
-   <li id="user-menu"></li>
-  {{# if(user.isLoggedIn()) { }}
-    <li><a href="#users/sign_in">My Account({{ user.get("email") }})</a></li>
-    <li><a href="#" id="sign-out">Sign out</a></li>
-  {{# } else { }}
-    <li><a href="#users/sign_in">Sign in</a></li>
-    <li><a href="#users/sign_up">Sign up</a></li>
-  {{# } }}
-  {{ user.cid }}
-  </ul>
-</script>
-
 
 
 <%#= yield %>
@@ -101,29 +84,6 @@
 </script>
 
 
-<script type="text/x-underscore-template" id="sign-in-template">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h2>Sign in</h2>
-      <div class="alert hide" role="alert">
-        <ul></ul>
-      </div>
-      <div class="form-group  well">
-        <div class="form-group">
-          <label>Email address</label>
-          <input class="form-control" type="text" name="email" placeholder="email"/>
-  </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input class="form-control" type="password" name="password" placeholder="password"/>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-default" id="login">Sign in</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
 
 
 
@@ -131,28 +91,28 @@
 
 
 <script id="appView" type="text/x-underscore-template">
-  <h1>before i kick it</h1>
-    <div id="nav-header">
-      <a href="#" id="heading">HOME</a>
-      <a href="#about" id="heading">ABOUT</a>
-      <a href="#prints" id="heading">BUCKET LIST</a>
-      <a href="#prints" id="heading">PRINTS</a>
-    <div>  
+  <div id="nav-header">
 
     <div id="social-icon-header">
-      <a href="https://instagram.com/before_ikickit/" id="heading"><i class="fa fa-instagram"></i></a>
-      <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-twitter"></i></a>
-      <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-facebook"></i></a>
+      <a href="https://instagram.com/before_ikickit/" id="heading-icons"><i class="fa fa-instagram"></i></a>
+      <a href="https://twitter.com/Before_IKickIt" id="heading-icons"><i class="fa fa-twitter"></i></a>
+      <a href="https://twitter.com/Before_IKickIt" id="heading-icons"><i class="fa fa-facebook"></i></a>
     </div>
+      
+      <h1>before i kick it</h1>
+  </div>
+
+  <div id="nav-bar">
+    <a href="#" id="heading">HOME</a>
+    <a href="#about" id="heading">ABOUT</a>
+    <a href="/prints" id="heading">BUCKET LIST</a>
+    <a href="/prints" id="heading">PRINTS</a>
+  </div>
 
       <!-- to output login form OR user details and logout button -->
       <div id="user">
 
 
-    <ul id="navbar">
-      <li><a href="#">Home</a></li>
-      <li><a href="#search/movies" class="logged-in-only">Search Movies</a></li>
-    </ul>
 
     <div id="main">
     </div>
@@ -160,20 +120,6 @@
     <div id="footer">
     </div>
 
-</script>
-
-<script id="loggedOutView" type="text/x-underscore-template">
-  <form id="login">
-    <label id="heading">LOG IN:</label>
-    <input type="text" id="email" placeholder="email" required>
-    <input type="password" id="password" placeholder="password" required>
-    <button>Log In</button>
-  </form>
-  <a href="#users/signup" class="register" id="heading">Register</a>
-</script>
-
-<script id="loggedInView" type="text/x-underscore-template">
-  <p>logged in as {{ bucketlistApp.currentUser }} <button id="logout">Logout</button></p>
 </script>
 
 <!-- HOME VIEW -->
@@ -191,7 +137,6 @@
 
 
 
-
 <script id="loggedOutView" type="text/x-underscore-template">
   <form id="login">
     <label>Login here:</label>
@@ -203,16 +148,17 @@
 </script>
 
 
-
-
-
 <script id="loggedInView" type="text/x-underscore-template">
   <p>logged in as: {{ bucketlistApp.currentUser }} <button id="logout">Logout</button></p>
 </script>
 
 
+<div id="homepage">
   <div id="homepage-block1">
-    <%= image_tag("card-examples.jpg", :width => "85%", :alt => "photo-card-examples", :align => "center") %>
+<!--     <%= image_tag("frontpage1.jpg", :alt => "photo-card-examples", :class => "frontpage-photos") %>
+    <%= image_tag("frontpage2.jpg", :class => "frontpage-photos") %>
+    <%= image_tag("frontpage3.jpg", :class => "frontpage-photos") %>
+    <%= image_tag("frontpage4.jpg", :alt => "photo-card-examples", :class => "frontpage-photos") %> -->
     <h1>some text can go here</h1>
     <p>a site for storing, collecting, and cherishing your favourite moments</p>
   </div>
@@ -229,10 +175,20 @@
     <p>turn your favourite bucket list moments into beautiful prints</p>
   </div>
 
+</div>
+
 <footer>
-  <a href="https://instagram.com/before_ikickit/" id="heading"><i class="fa fa-instagram fa-lg"></i></a>
-  <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-twitter fa-lg"></i></a>
-  <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-facebook fa-lg"></i></a>
+  <div id="social-media-footer">
+    <a href="https://instagram.com/before_ikickit/" id="heading"><i class="fa fa-instagram"></i></a>
+    <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-twitter"></i></a>
+    <a href="https://twitter.com/Before_IKickIt" id="heading"><i class="fa fa-facebook"></i></a>
+  </div>
+  <div id="footer-nav">
+    <a href="#" id="heading">HOME /</a>
+    <a href="#about" id="heading">ABOUT /</a>
+    <a href="/prints" id="heading">BUCKET LIST /</a>
+    <a href="/prints" id="heading">PRINTS</a>
+  </div>
 </footer>
 
 

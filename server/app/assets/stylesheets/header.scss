@@ -1,6 +1,10 @@
-body {
+body, html {
 	width: 100%;
 }
+
+// #app {
+// 	width: 100%;
+// }
 
 #container {
 	width: 100%;
@@ -14,25 +18,47 @@ body {
 	}
 }
 
-#add {
-	border: 1px solid red;
-	padding: 2% 2%;
-	width: 25%;
-	text-align: center;
-	.fa-plus {
-		display: block;
-	}
-	input {
-		display: block;
-		text-align: center;
-	}
-}
 
 #nav-header {
-	text-align: center;
 	display: inline-block;
+	// vertical-align: middle;
+	padding: 0% 2%;
+	background-color: white;
+	border-bottom: 1px solid rgba(200, 200, 200, 1);
+	// position: fixed;
+  z-index: 9999;
+  // width: 100%;
+	height: 70px;
+	h1 {
+		color: rgba(80, 80, 80, 1);
+		font-size: 300%;
+		display: inline-block;
+		text-align: center;
+	}
+	#heading {
+		color: rgba(80, 80, 80, 1);
+		border-right: 1px solid white;
+	}
+	#social-icon-header {
+		display: inline-block;
+		color: rgba(80, 80, 80, 1);
+	}
 }
 
-#social-icon-header {
-	display: inline-block;
+#nav-bar {
+	background-color: white;
+	border-bottom: 1px solid rgba(200, 200, 200, 1);
+	text-align: center;
+	padding: 0.5% 0%;
+	a+a { 
+		// border-left: 1px solid rgba(200, 200, 200, 1); 
+		margin: 0% 2% 0% 2%;
+	}
+	a {
+		font-size: 75%;
+		letter-spacing: 3px;
+	}
+	a:hover {
+		color: rgba(200, 200, 200, 1);
+	}
 }

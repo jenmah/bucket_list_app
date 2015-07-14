@@ -1,8 +1,17 @@
 footer {
-	background-color: rgba(90, 90, 90, 1);
-	height: 150px;
-	margin-top: 10%;
+	// background-color: rgba(220, 220, 220, 1);
+	background-color: white;
+	height: 100px;
+	// margin-top: 10%;
 	.fa {
-		color: white;
+		color: rgba(110, 110, 110, 1);
+	}
+	#social-media-footer {
+		display: inline-block;
+	}
+	#footer-nav {
+		display: inline-block;
+		letter-spacing: 3px;
+		font-size: 80%;
 	}
 }
